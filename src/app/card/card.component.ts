@@ -6,17 +6,15 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent implements OnInit {
 
   profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    })
+    fullName: new FormControl(''),
+    cardNumber: new FormControl(''),
+    expDate: new FormControl(''),
+    cvcNumber: new FormControl('')
+
   });
 
   constructor() { }
@@ -28,13 +26,8 @@ export class CardComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
   }
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
-    });
-  }
 
+  // updateName() {
+  //   this.name.setValue('Nancy');
+  // }
 }

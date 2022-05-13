@@ -10,34 +10,28 @@
         <h2 class="title text-start">New card</h2>
       </div>
 
-<div class="card-form form-group">
 
-    <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
 
-        <label for="owner-name">Cardholder Name: </label>
-        <input id="owner-name" type="text" formControlName="Name">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
-        <label for="cardNumber">Card number: </label>
-        <input id="cardNumber" type="number" formControlName="cardNumber" >
+        <label for="full-name">Cardholder name </label>
+        <input id="full-name" type="text" formControlName="fullName">
       
-        <label for="expDate">Exp date: </label>
-        <input id="expDate" type="datetime" formControlName="expDate">
-      
-        <label for="cardCVC">CVC: </label>
-        <input id="cardCVC" type="text" formControlName="cardCVC">
+        <label for="card-number">Card number </label>
+        <input id="card-number" type="number" formControlName="cardNumber">
+
+        <label for="exp-date">Exp date: </label>
+        <input id="exp-date" type="date" formControlName="expDate">
+
+        <label for="cvc-number">CVC </label>
+        <input id="cvc-number" type="number" formControlName="cvcNumber">
+
+       
+        <p>Complete the form to enable button.</p>
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
       </form>
 
-      
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Set as primary
-        </label>
-<button type="submit" [disabled]="!profileForm.valid">Add card</button>
 
-</div>
-
-    
       
     </div>
   </div>

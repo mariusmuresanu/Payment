@@ -9,6 +9,35 @@
 
         <h2 class="title text-start">New card</h2>
       </div>
+
+<div class="card-form form-group">
+
+    <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+
+        <label for="owner-name">Cardholder Name: </label>
+        <input id="owner-name" type="text" formControlName="Name">
+
+        <label for="cardNumber">Card number: </label>
+        <input id="cardNumber" type="number" formControlName="cardNumber" >
+      
+        <label for="expDate">Exp date: </label>
+        <input id="expDate" type="datetime" formControlName="expDate">
+      
+        <label for="cardCVC">CVC: </label>
+        <input id="cardCVC" type="text" formControlName="cardCVC">
+      </form>
+
+      
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Set as primary
+        </label>
+<button type="submit" [disabled]="!profileForm.valid">Add card</button>
+
+</div>
+
+    
       
     </div>
   </div>

@@ -1,22 +1,35 @@
-<div class="container">
-    <div class="row text-center">
+<div class="container ">
+    <div class="row text-center mx-auto">
         <h1 class="title is-1 text-start">Checkout</h1>
         <h5 class="title text-start">Select your payment method</h5>
         <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-brands fa-apple-pay fa-3x"></i></button><p class="text-center title is-4">Apple Pay</p>
+                <button class="nav-link " id="pills-apple-tab" data-bs-toggle="pill" data-bs-target="#pills-apple" type="button" role="tab" aria-controls="pills-apple" aria-selected="true"><i class="fa-brands fa-apple-pay fa-3x"></i></button><p class="text-center title is-4">Apple Pay</p>
+            </li>
+            <li class="nav-item " role="presentation">
+                <button class="nav-link active" id="pills-card-tab" data-bs-toggle="pill" data-bs-target="#pills-card" type="button" role="tab" aria-controls="pills-card" aria-selected="false"><i class="fa-solid fa-credit-card fa-3x"></i></button><p class="text-center title is-4">Credit Card</p>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-credit-card fa-3x"></i></button><p class="text-center title is-4">Credit Card</p>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fa-brands fa-paypal fa-3x"></i></button><p class="text-center title is-4">PayPal</p>
+                <button class="nav-link" id="pills-paupal-tab" data-bs-toggle="pill" data-bs-target="#pills-paupal" type="button" role="tab" aria-controls="pills-paupal" aria-selected="false"><i class="fa-brands fa-paypal fa-3x"></i></button><p class="text-center title is-4">PayPal</p>
             </li>
         </ul>
         <div class="tab-content " id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">bbb</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">ccc</div>
+            <div class="tab-pane fade " id="pills-apple" role="tabpanel" aria-labelledby="pills-apple-tab"></div>
+            <div class="tab-pane fade show active" id="pills-card" role="tabpanel" aria-labelledby="pills-card-tab">
+                <h5 class="title text-start">Select your card</h5>
+                <ul class="cardList">
+                    <li class="card-option text-start"><i class="fa-solid fa-credit-card fa-2x"></i><h5 class="title text-start">0000 0000 0000 0000</h5> </li>
+                </ul>
+                <h6 class="title text-start">You do not have a credit card on file.</h6>
+                <h5 class="title text-start">Add a new card</h5>
+            </div>
+            <div class="tab-pane fade" id="pills-paupal" role="tabpanel" aria-labelledby="pills-paupal-tab"></div>
         </div>
+        <div class="payment-action d-flex justify-content-between">
+            <h5 class="title text-start">Total amount</h5>
+            <h1 class="title is-1 text-start">$29.90</h1>
+            
+        </div>
+        <button class="mx-auto">Pay now</button>
     </div>
 </div>

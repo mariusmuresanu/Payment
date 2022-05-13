@@ -1,16 +1,22 @@
-#pills-home {
+#pills-apple {
     border: 2px solid red; 
-    width: 75%; 
+    width: 400px; 
     margin: auto;
+    background-image: url(/assets/images/ApplePay.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
 };
-#pills-profile {
-    border: 2px solid rgb(0, 140, 255);  
-    width: 75%;
-    margin: auto;
-};#pills-contact {
-    border: 2px solid rgb(0, 255, 221);  
+#pills-card {
+    
     width: 400px;
     margin: auto;
+};#pills-paupal {
+
+    width: 400px;
+    margin: auto;
+    background-image: url(/assets/images/PpaypalForm.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
 };
 
 button{
@@ -30,12 +36,29 @@ margin: 0 10px;
 
 .tab-pane{
     width: 400px;
-    height: 200px;
+    height: 400px;
 }
 
-#pills-home{
-    
-    background-image:url(/src/assets/images/PpaypalForm.jpg);
-    background-color: aquamarine;
-  
+.paymant-action {
+    display: inline-block;
+}
+.row{
+    max-width: 500px;
+}
+
+ul.cardList{
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    height: 200px;
+
+}
+
+#pills-card > ul > li{
+    opacity: 0.2;
+}
+
+#pills-card > ul > li{
+    display: flex;
+    justify-content: space-around;
 }

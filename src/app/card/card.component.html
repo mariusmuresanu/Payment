@@ -14,24 +14,60 @@
 
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
-        <label for="full-name">Cardholder name </label>
+        <label for="full-name">Cardholder name</label>
         <input id="full-name" type="text" formControlName="fullName">
       
-        <label for="card-number">Card number </label>
+        <label for="card-number">Card number</label>
         <input id="card-number" type="number" formControlName="cardNumber">
 
-        <label for="exp-date">Exp date: </label>
+        <label for="exp-date">Exp date</label>
         <input id="exp-date" type="date" formControlName="expDate">
 
-        <label for="cvc-number">CVC </label>
+        <label for="cvc-number">CVC</label>
         <input id="cvc-number" type="number" formControlName="cvcNumber">
 
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Set as primary</label>
+        </div>
        
         <p>Complete the form to enable button.</p>
-<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+<button type="submit" [disabled]="!profileForm.valid">Add card</button>
       </form>
 
 
       
     </div>
   </div>
+<div class="newCard">
+  <table>
+    <thead>
+      <tr>
+        <td>Cardholder name</td>
+        <td>Card number</td>
+        <td>Exp date</td>
+        <td>CVC</td>
+        <td>Set as primary</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let card of cards">
+        <td>{{card.cardholderName}}</td>
+        <td>{{card.cardNumber}}</td>
+        <td>{{card.cardExpDate}}</td>
+        <td>{{card.cardCvc}}</td>
+        <td>{{card.cardPrimary}}</td>
+
+      
+      </tr>
+    </tbody>
+  </table>
+
+  <input #name type="text" placeholder="Cardholder name">
+  <input #number type="text" placeholder="Card number">
+  <input #date type="text" placeholder="Exp date">
+  <input #cvc type="number" placeholder="CVC">
+  <input #primary type="text" placeholder="primary">
+  <button (click)="addCard()">Add card</button>
+
+</div>

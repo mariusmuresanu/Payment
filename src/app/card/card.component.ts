@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Card } from '../models/card';
 
 @Component({
   selector: 'app-card',
@@ -17,6 +18,17 @@ export class CardComponent implements OnInit {
 
   });
 
+  cards: Card[] =[];
+
+  @ViewChild('name') name?: ElementRef;
+  @ViewChild('number') number?: ElementRef;
+  @ViewChild('date') date?: ElementRef;
+  @ViewChild('cvc') cvc?: ElementRef;
+  @ViewChild('primary') primary?: ElementRef;
+
+
+  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -30,4 +42,18 @@ export class CardComponent implements OnInit {
   // updateName() {
   //   this.name.setValue('Nancy');
   // }
+
+  addCard(){
+const name = this.name?.nativeElement.value;
+const number = this.number?.nativeElement.value;
+const date = this.date?.nativeElement.value;
+const cvc = this.cvc?.nativeElement.value;
+const primary = this.primary?.nativeElement.value;
+
+
+    //this.cards.push(new Card(name, number, date, cvc, primary));
+
+this.cards = [...this.cards, new Card(name, number, date, cvc, primary)];
+
+  }
 }

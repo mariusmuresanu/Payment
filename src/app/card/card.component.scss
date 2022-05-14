@@ -10,20 +10,33 @@ a {
     background-color: #ddd;
     color: black;
   }
-  
-  .previous {
+    .previous {
     color: black;
   }
-  
-  .previous > h6{
+    .previous > h6{
     margin-top: 5px;
     margin-left: 15px;
   }
-
   .container{
       max-width: 400px;
   }
-
-  label {
+  label, input {
       display: block;
   }
+  td, tr{
+    border: 1px solid black;
+    padding: 5px;
+}
+table{
+  margin-top: 50px;
+  text-align: center;
+}
+.newCard input{
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  }
+  .newCard button{
+    padding: 10px;
+
+    }
